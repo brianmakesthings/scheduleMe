@@ -1,23 +1,19 @@
 {
-  "name": "Event-Scheduler",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "devStart": "nodemon server.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "name": "schedule-me",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "express-ejs-layouts": "^2.5.0",
-    "mongoose": "^5.8.4"
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "0.9.5"
   },
-  "devDependencies": {
-    "dotenv": "^8.2.0",
-    "nodemon": "^2.0.2"
-  }
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": "http://localhost:8080"
 }
