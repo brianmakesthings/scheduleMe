@@ -2,10 +2,11 @@
   --nav-title-font-size: 3rem;
   --nav-title-font-weight: bold;
   --nav-link-font-weight: 300;
+  --nav-color-scheme: black;
 }
 
 .header-title {
-  color: #0b4f6c;
+  color: var(--nav-color-scheme);
   text-decoration: none;
   font-size: var(--nav-title-font-size);
   font-weight: var(--nav-title-font-weight);
@@ -18,7 +19,6 @@
   align-items: center;
   margin-left: 5rem;
   margin-right: 5rem;
-  margin-bottom: 5rem;
 }
 
 .header-nav ul {
@@ -33,11 +33,11 @@
 
 .header-nav li a {
   text-decoration: none;
-  color: var(--color-text-light);
+  color: var(--nav-color-scheme);
   font-weight: var(--nav-link-font-weight);
   padding: 1rem;
 }
 
 .header-nav li a:hover, .header-title:hover {
-  color: white;
+  color: gray;
 }
