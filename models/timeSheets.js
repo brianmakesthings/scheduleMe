@@ -18,4 +18,6 @@ const timeSheet = new mongoose.Schema({
       required: true;
     }
   }
-)
+);
+
+module.exports = mongoose.model('timesheets', timeSheet);
