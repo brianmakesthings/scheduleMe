@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const timeSheet = new mongoose.Schema({
+    title: {
+      type: String,
+      required: true
+    },
     dates: {
       type: Array,
       required: true
