@@ -1,4 +1,4 @@
-const timeSheet = require('../models/timeSheets.js');
+const timeSheets = require('../models/timeSheets.js');
 
 createTimeSheet = (req, res) => {
   const body = req.body;
@@ -10,7 +10,7 @@ createTimeSheet = (req, res) => {
     })
   }
 
-  const timeSheet = new timeSheet(body);
+  const timeSheet = new timeSheets(body);
 
   if (!timeSheet) {
        return res.status(400).json({ success: false, error: err })
@@ -33,7 +33,7 @@ createTimeSheet = (req, res) => {
        })
 }
 
-updatetimeSheet = async (req, res) => {
+updateTimeSheet = async (req, res) => {
     const body = req.body
 
     if (!body) {
@@ -43,7 +43,7 @@ updatetimeSheet = async (req, res) => {
         })
     }
 
-    timeSheet.findOne({ _id: req.params.id }, (err, timeSheet) => {
+    timeSheets.findOne({ _id: req.params.id }, (err, timeSheet) => {
         if (err) {
             return res.status(404).json({
                 err,
@@ -73,8 +73,8 @@ updatetimeSheet = async (req, res) => {
     })
 }
 
-deletetimeSheet = async (req, res) => {
-    await timeSheet.findOneAndDelete({ _id: req.params.id }, (err, timeSheet) => {
+deleteTimeSheet = async (req, res) => {
+    await timeSheets.findOneAndDelete({ _id: req.params.id }, (err, timeSheet) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
         }
@@ -86,5 +86,20 @@ deletetimeSheet = async (req, res) => {
         }
 
         return res.status(200).json({ success: true, data: timeSheet })
+    }).catch(err => console.log(err))
+}
+
+getTimeSheetById = async (req, res) => {
+    await timeSheets.findOne({ _id: req.params.id }, (err, timeSheet) => {
+        if (err) {
+            return res.status(400).json({ success: false, error: err })
+        }
+
+        if (!timeSheet) {
+            return res
+                .status(404)
+                .json({ success: false, error: `TimeSheet not found` })
+        }
+        return res.status(200).json({ success: true, data: timesheet })
     }).catch(err => console.log(err))
 }
