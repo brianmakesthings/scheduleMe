@@ -103,3 +103,14 @@ getTimeSheetById = async (req, res) => {
         return res.status(200).json({ success: true, data: timesheet })
     }).catch(err => console.log(err))
 }
+
+getTimeSheet = async (req, res) => {
+    await timeSheets.find({}, (err, timeSheet) => {
+        if (err) {
+            return res.status(400).json({ success: false, error: err })
+        }
+        if (!timeSheet.length) {
+            return res
+                .status(404)
+                .json({ success: false, error: `timeSheet not found` })
+        }
