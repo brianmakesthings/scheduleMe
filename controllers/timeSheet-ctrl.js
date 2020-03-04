@@ -1,3 +1,5 @@
+//The name of this was timeSheet which is the same as then
+//Instance of it that we used below so I changed it to timeSheets instead
 const timeSheets = require('../models/timeSheets.js');
 
 createTimeSheet = (req, res) => {
