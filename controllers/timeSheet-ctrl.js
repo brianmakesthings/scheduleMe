@@ -118,3 +118,11 @@ getTimeSheet = async (req, res) => {
         }
       }
     }
+
+module.exports = {
+  createTimeSheet,
+  updateTimeSheet,
+  deleteTimeSheet,
+  getTimeSheet,
+  getTimeSheet,
+}
