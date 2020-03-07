@@ -1,21 +1,15 @@
 import React from "react";
 
-import ItemForm from "../ItemForm/ItemForm";
+import ItemForm from "../ItemForm/TextForm";
 
 const Contact = ({ setForm, formData, navigation }) => {
-	const { phone, email } = formData;
+	const { email } = formData;
 
 	const { previous, next } = navigation;
 
 	return (
 		<div className="form">
 			<h3>Contact </h3>
-			<ItemForm
-				label="Phone"
-				name="phone"
-				value={phone}
-				onChange={setForm}
-			/>
 			<ItemForm
 				label="E-mail"
 				name="email"

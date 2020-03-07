@@ -1,25 +1,25 @@
 import React from "react";
 
-import ItemForm from "../ItemForm/TimeForm";
+import ItemForm from "../ItemForm/DateForm";
 
 const Time = ({ setForm, formData, navigation }) => {
-	const { timeBegin, timeEnd } = formData;
+	const { dateBegin, dateEnd } = formData;
 
 	const { previous, next } = navigation;
 
 	return (
 		<div className="form">
-			<h3>Time Input</h3>
+			<h3>Date Input</h3>
 			<ItemForm
-				label="Time begin"
-				name="timeBegin"
-				value={timeBegin}
+				label="Date begin"
+				name="dateBegin"
+				value={dateBegin}
 				onChange={setForm}
 			/>
 			<ItemForm
-				label="Time end"
-				name="timeEnd"
-				value={timeEnd}
+				label="Date end"
+				name="dateEnd"
+				value={dateEnd}
 				onChange={setForm}
 			/>
 			<div>

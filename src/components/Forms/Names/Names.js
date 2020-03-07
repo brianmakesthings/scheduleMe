@@ -1,9 +1,9 @@
 import React from "react";
 
-import ItemForm from "../ItemForm/ItemForm";
+import ItemForm from "../ItemForm/TextForm";
 
 const Names = ({ setForm, formData, navigation }) => {
-	const { firstName, lastName, nickName } = formData;
+	const { firstName, lastName } = formData;
 
 	const { next } = navigation;
 
@@ -20,12 +20,6 @@ const Names = ({ setForm, formData, navigation }) => {
 				label="Last Name"
 				name="lastName"
 				value={lastName}
-				onChange={setForm}
-			/>
-			<ItemForm
-				label="Nick Name"
-				name="nickName"
-				value={nickName}
 				onChange={setForm}
 			/>
 			<div>
