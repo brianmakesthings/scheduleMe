@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.2",
     "express": "^4.17.1",
-    "mongoose": "^5.9.3",
     "hookrouter": "^1.2.3",
+    "mongoose": "^5.9.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-hooks-helper": "^1.6.0",
