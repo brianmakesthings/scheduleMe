@@ -1,24 +1,34 @@
 const mongoose = require('mongoose');
-
+const Person = require('./person.js');
+//We can also add date of creation as well?
 const timeSheet = new mongoose.Schema({
     title: {
       type: String,
       required: true
     },
+    //This will correlate with Id from person model
+    id: {
+      type: Number,
+      required: true
+    },
     dates: {
-      type: Array,
+      type: Date,
       required: true
     },
     timeStart: {
-      type: Date,
+      type: String,
       required: true
     },
     timeEnd: {
-      type: Date,
+      type: String,
       required: true;
     },
     increments: {
       type: Number,
+      required: true;
+    },
+    people: {
+      type: [Person]
       required: true;
     }
   }

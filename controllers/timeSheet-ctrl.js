@@ -53,10 +53,12 @@ updateTimeSheet = async (req, res) => {
             })
         }
         timeSheet.title = body.title
+        timeSheet.id = body.id
         timeSheet.dates = body.dates
         timeSheet.timeStart = body.timeStart
         timeSheet.timeEnd = body.timeEnd
         timeSheet.increments = body.increments
+        timeSheet.people = body.people
         timeSheet
             .save()
             .then(() => {
