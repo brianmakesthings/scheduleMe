@@ -28,7 +28,7 @@ const timeSheet = new mongoose.Schema({
       required: true;
     },
     people: {
-      type: [Person]
+      type: [Person],
       required: true;
     }
   }
